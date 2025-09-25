@@ -1,0 +1,33 @@
+ALGORITHM Sentence_Len
+VAR
+    Letter : CHAR;
+    i : INTEGER := 0;
+    x : INTEGER := 1;
+    y : INTEGER := 0;
+BEGIN
+    // Loop to enter data and count 
+    REPEAT
+        Write("Enter your character: ")
+        Read(Letter);
+
+        i := i + 1;
+    // Condition to count words
+        IF (Letter =" ") THEN
+             x := x + 1;
+        END_IF
+    // Condition to count vowels
+        IF (Letter = "a" OR Letter ="e" OR Letter ="i" OR Letter ="o" OR Letter ="u" OR Letter ="y" OR Letter ="A" 
+           OR Letter ="E" OR Letter ="I" OR Letter ="O" OR Letter ="U" OR Letter ="Y") THEN
+            y := y + 1;
+        END_IF
+
+       
+        
+    UNTIL (Letter = ".");
+
+
+        Write("This is the sentence's length: "i);
+        Write("This is the number of words: "x);
+        Write("this is the number of vowels: "y)
+    
+END
